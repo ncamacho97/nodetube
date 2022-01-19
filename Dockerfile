@@ -1,5 +1,5 @@
 FROM bougyman/voidlinux as void
-RUN xbps-install -Syu git tar python nodejs-lts-10 base-devel
+RUN xbps-install -Syu git tar python nodejs-lts base-devel
 COPY app* package* .env.settings.sample .env.private.sample copySettingsAndPrivateFiles.js Procfile routes.js /app/
 COPY bin /app/bin/
 COPY caching /app/caching/
